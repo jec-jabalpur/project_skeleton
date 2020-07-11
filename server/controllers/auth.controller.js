@@ -65,5 +65,5 @@ export default {
     signin,
     signout,
     requireSignin,
-    hasAuhorization
+    hasAuthorization
 };

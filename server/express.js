@@ -20,4 +20,9 @@ app.use(cors());
 app.use('/', userRoutes);
 app.use('/', authRoutes);
 
+app.get('/', (req, res) => {
+    res.status(200).send(Template());
+});
+
 export default app;
+

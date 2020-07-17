@@ -7,10 +7,23 @@ import helmet from 'helmet';
 import Template from './../template';
 import userRoutes from './routes/user.routes';
 import authRoutes from './routes/auth.routes';
+import devBundle from './devBundle';
+import path from 'path';
 
 const app = express();
 
+devBundle.compile(app);
+
 app.use(bodyParser.json());
+
+const CURRENT_WORKING_DIR = process.cwd();
+app.use('/dist',
+    express.static(
+        path.join(CURRENT_WORKING_DIR, 'dist')
+    )
+);
+
+
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(cookieParser());

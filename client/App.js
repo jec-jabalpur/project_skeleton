@@ -5,6 +5,7 @@ import { hot } from 'react-hot-loader';
 import { indigo, pink } from '@material-ui/core/colors';
 import MainRouter from './MainRouter';
 
+
 const theme = createMuiTheme({
     palette: {
         primary: {

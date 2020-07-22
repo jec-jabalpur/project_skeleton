@@ -4,6 +4,7 @@ import {withStyles} from '@material-ui/core/styles';
 import {Card, CardContent, CardMedia} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import baatein_home from './../assets/images/baatein_home.png';
+import {Link} from 'react-router-dom';
 
 const styles = theme => ({
     card: {
@@ -48,6 +49,7 @@ class Home extends Component {
                         बातें
                     </Typography>
                 </CardContent>
+                <Link to="/users">Users</Link>
             </Card>
         );
     }
@@ -55,6 +57,6 @@ class Home extends Component {
 
 Home.propTypes = {
     classes: PropTypes.object.isRequired
-}
+};
 
-export default withStyles(styles) (Home);
+export default withStyles (styles) (Home);

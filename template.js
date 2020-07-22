@@ -4,6 +4,7 @@ export default () => {
     <head>
         <title>Project Skeleton</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100;300;400">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>

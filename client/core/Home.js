@@ -50,6 +50,7 @@ class Home extends Component {
                     </Typography>
                 </CardContent>
                 <Link to="/users">Users</Link>
+                <Link to="/signup">Signup</Link>
             </Card>
         );
     }

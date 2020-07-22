@@ -7,6 +7,20 @@ import MainRouter from './MainRouter';
 
 
 const theme = createMuiTheme({
+    typography: {
+        fontFamily: [
+            '-apple-system',
+            'BlinkMacSystemFont',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"'
+        ].join(',')
+    },
     palette: {
         primary: {
             light: '#757de8',

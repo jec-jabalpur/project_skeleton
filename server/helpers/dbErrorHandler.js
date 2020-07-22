@@ -2,6 +2,7 @@ const getUniqueErrorMessage = (err) => {
     let custom_message;
     try {
         let field_name = err.message.substring(err.message.lastIndexOf('.$') + 2, err.message.lastIndexOf('_1'));
+        console.log(field_name);
         custom_message = field_name.charAt(0).toUpperCase() + field_name.slice(1) + ' already exists!';
     }
     catch(ex) {

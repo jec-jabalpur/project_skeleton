@@ -21,9 +21,7 @@ const styles = theme => ({
     title: {
         margin: `${theme.spacing(4)}px 0 ${theme.spacing(2)}px`,
         color: theme.palette.backgroundTitle,
-        fontSize: 20,
-        fontFamily: 'Roboto',
-        fontWeight: 500
+        fontSize: 20
     }
 });
 

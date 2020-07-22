@@ -4,6 +4,7 @@ import auth from './auth-helper';
 
 
 const PrivateRoute = ({ component: Component, ...rest}) => {
+
     <Route {...rest} render={
         props => {
             auth.isAuthenticated() ?

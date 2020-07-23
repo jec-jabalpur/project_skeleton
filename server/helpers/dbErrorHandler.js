@@ -1,7 +1,7 @@
 const getUniqueErrorMessage = (err) => {
     let custom_message;
     try {
-        let field_name = err.message.substring(err.message.lastIndexOf('.$') + 2, err.message.lastIndexOf('_1'));
+        let field_name = err.message.substring(err.message.lastIndexOf('_1') , err.message.lastIndexOf('x')+2);
         custom_message = field_name.charAt(0).toUpperCase() + field_name.slice(1) + ' already exists!';
     }
     catch(ex) {
@@ -18,7 +18,7 @@ const getErrorMessage = (err) => {
         switch(err.code) {
             case 11000:
             case 11001:
-                message: getUniqueErrorMessage(err)
+                message= getUniqueErrorMessage(err)
                 break
             default:
                 message = 'Something went wrong!'

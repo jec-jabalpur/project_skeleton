@@ -14,7 +14,6 @@ import Button from '@material-ui/core/Button';
 import {create} from './api-user.js';
 
 
-
 const styles = theme => ({
     card: {
         maxWidth: 600,
@@ -68,7 +67,6 @@ class Signup extends Component {
             else {
                 this.setState({error: '', open: true});
             }
-
         });
     }
 
@@ -80,7 +78,7 @@ class Signup extends Component {
                 <Card className={classes.card}>
                     <CardContent>
                         <Typography type="headline" component="h1" className={classes.title}>                        
-                            Signup
+                            Sign Up
                         </Typography>
                         <TextField id="name" label="Name" className={classes.textField} value={this.state.name} onChange={this.handleChange('name')} margin="normal"></TextField> <br />
                         <TextField id="email" label="Email" type="email" className={classes.textField} value={this.state.email} onChange={this.handleChange('email')} margin="normal"></TextField> <br />
@@ -88,7 +86,7 @@ class Signup extends Component {
                         {
                             this.state.error && (
                                     <Typography component="p" color="error">
-                                        <Icon color="error" className={classes.error}>Error</Icon>
+                                        <Icon color="error" className={classes.error}>error</Icon>
                                         {this.state.error}
                                     </Typography>
                                 )
@@ -100,7 +98,7 @@ class Signup extends Component {
                         </Button>
                     </CardActions>
                 </Card>
-                <Dialog open={this.state.open} disableBackdropClick={true}>
+                <Dialog open={this.state.open} disableBackdropClick>
                     <DialogTitle>Account Created</DialogTitle>
                     <DialogContent>
                     {

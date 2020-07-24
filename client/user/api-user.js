@@ -1,6 +1,6 @@
 const create = (user) => {
 
-    fetch('/api/users/', {
+    return fetch('/api/users/', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -10,7 +10,7 @@ const create = (user) => {
         }
     )
     .then((response) => {
-        return response.json();    
+        return response.json();
     })
     .catch((err) => console.log(err));
 }

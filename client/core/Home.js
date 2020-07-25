@@ -52,6 +52,7 @@ class Home extends Component {
                 <Link to="/users">Users</Link>
                 <Link to="/signup">Signup</Link>
                 <Link to="/signin">Signin</Link>
+                <Link to="/user/5f182da980c1ede2fcefbd9c">Profile</Link>
             </Card>
         );
     }

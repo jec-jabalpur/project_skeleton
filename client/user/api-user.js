@@ -37,7 +37,9 @@ const read = (params, credentials) => {
         }
     )
     .then((response) => {
-        return response.json();    
+        let aa = response.json();
+        console.log(aa);
+        return aa;
     })
     .catch((err) => console.log(err));
 }

@@ -37,14 +37,12 @@ const read = (params, credentials) => {
         }
     )
     .then((response) => {
-        let aa = response.json();
-        console.log(aa);
-        return aa;
+        return response.json();
     })
     .catch((err) => console.log(err));
 }
 
-const update = (prams, credentials, user) => {
+const update = (params, credentials, user) => {
     return fetch('/api/users/' + params.userId, {
             method: 'PUT',
             headers: {

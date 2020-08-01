@@ -60,7 +60,6 @@ const update = (req, res, next) => {
         user.salt = undefined;
         res.json(user);
     });
-
 };
 
 const remove = (req, res, next) => {

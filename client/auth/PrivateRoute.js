@@ -3,10 +3,10 @@ import {Route, Redirect} from 'react-router-dom';
 import auth from './auth-helper';
 
 
-const PrivateRoute = ({ component: Component, ...rest}) => {
+const PrivateRoute = ({ component: Component, ...rest}) => (
 
     <Route {...rest} render={
-        props => {
+        props => (
             auth.isAuthenticated() ?
             (<Component {...props} />)
             :
@@ -18,9 +18,8 @@ const PrivateRoute = ({ component: Component, ...rest}) => {
                     }}
                 />
             )
-
-        }
+        )
     } />
-}
+)
 
 export default PrivateRoute;

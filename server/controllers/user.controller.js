@@ -45,7 +45,6 @@ const list = (req, res, next) => {
     }).select('name email updated created');
 };
 
-
 const update = (req, res, next) => {
     let user = req.profile;
     user = _.extend(user, req.body);
@@ -60,7 +59,7 @@ const update = (req, res, next) => {
         user.salt = undefined;
         res.json(user);
     });
-
+    next();
 };
 
 const remove = (req, res, next) => {

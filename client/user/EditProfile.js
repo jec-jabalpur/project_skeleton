@@ -77,13 +77,14 @@ class EditProfile extends Component {
         };
         update(
             {userId: this.match.params.userId},
-            {t: jwt.token}
+            {t: jwt.token},
+             user
         ).then((data) => {
             if (data.error) {
                 this.setState({error: data.error});
             }
             else {
-                this.setState({'userId': data._id, 'redirectToProfile': true});
+                this.setState({userId: data._id, redirectToProfile: true});
             }
         });
     }

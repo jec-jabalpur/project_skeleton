@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import crypto from 'crypto';
 
+
 const UserSchema = new mongoose.Schema({
    name: {
        type: String,
@@ -23,7 +24,13 @@ const UserSchema = new mongoose.Schema({
    created: {
        type: Date,
        default: Date.now
-   }
+   },
+    photo: {
+      data: Buffer,
+      contentType: String
+    },
+    following: [{type: mongoose.Schema.ObjectId, ref: 'User'}],
+    followers: [{type: mongoose.Schema.ObjectId, ref: 'User'}]
 });
 
 UserSchema

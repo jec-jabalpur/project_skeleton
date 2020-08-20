@@ -55,11 +55,11 @@ const update = (req, res, next) => {
                 error: errorHandler.getErrorMessage(err)
             });
         }
-        user.hashed_password = undefined;
-        user.salt = undefined;
-        res.json(user);
+        result.hashed_password = undefined;
+        result.salt = undefined;
+        res.json(result);
     });
-    next();
+    //next();
 };
 
 const remove = (req, res, next) => {
